@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Avengers</title>
+</head>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="home">
+        <h1>The Avengers</h1>
+    </header>
+    <main>
+        <section id="about-us">
+            <header>
+                <h2>About us</h2>
+            </header>
+            <video src="assets/video/video.mp4" controls>
+                Video about avengers
+            </video>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore deserunt inventore laboriosam quos, libero in aut eum, ullam numquam necessitatibus maiores iure culpa repellat iusto minima corporis ab ipsam! Officiis!</p>
+        </section>
+        <section id="team">
+            <header>
+                <h2>Team</h2>
+            </header>
+            <article>
+                <img src="assets/img/profiles/ironman.jpg" alt="Iron Man">
+                <h3>Iron Man</h3>
+                <cite>Robert Downey Jr.</cite>
+                <p>A self-described genius, billionaire, playboy, and philanthropist with an electromechanical suit of armor of his own invention</p>
+            </article>
+            <article>
+                <img src="assets/img/profiles/capitan-america.jpg" alt="Capitán América">
+                <h3>Capitán América</h3>
+                <cite>Chris Evans</cite>
+                <p>A World War II veteran who was enhanced to the peak of human physicality by an experimental serum and frozen in suspended animation before waking up in the modern world</p>
+            </article>
+            <article>
+                <img src="assets/img/profiles/black-widow.jpg" alt="Viuda Negra">
+                <h3>Viuda Negra</h3>
+                <cite>Scarlett Johansson</cite>
+                <p>A highly trained spy working for S.H.I.E.L.D</p>
+            </article>
+            <article>
+                <img src="assets/img/profiles/thor.jpg" alt="Thor">
+                <h3>Thor</h3>
+                <cite>Chris Hemsworth</cite>
+                <p>The crown prince of Asgard, based on the Norse mythological deity of the same name</p>
+            </article>
+            <article>
+                <img src="assets/img/profiles/hulk.jpg" alt="Hulk">
+                <h3>Hulk</h3>
+                <cite>Mark Ruffalo</cite>
+                <p>A genius scientist who, because of exposure to gamma radiation, transforms into a monster when enraged or agitated</p>
+            </article>
+            <article>
+                <img src="assets/img/profiles/hawk-eye.jpg" alt="Clint Barton Hawkeye">
+                <h3>Clint Barton Hawkeye</h3>
+                <cite>Jeremy Renner</cite>
+                <p>A master archer working as an agent for S.H.I.E.L.D</p>
+            </article>
+        </section>
+        <section id="movies">
+            <header>
+                <h2>Movies</h2>
+                <article>
+                    <img src="assets/img/movie1.jpg" alt="The Avengers 2012">
+                    <h3>The Avengers <time datetime="2012-01-01">(2012)</time></h3>
+                    <p>Nick Fury, the director of S.H.I.E.L.D., gathers the superheroes Iron Man, Thor, Captain America, the Hulk, Black Widow and Hawkeye to fight Thor's brother Loki, who plots to subjugate the Earth.</p>
+                </article>
+                <article>
+                    <img src="assets/img/movie2.jpg" alt=">Avengers: Age of Ultron 2015">
+                    <h3>Avengers: Age of Ultron <time datetime="2015-01-01">(2015)</time></h3>
+                    <p>Iron Man, Captain America, Thor, the Hulk, Black Widow, and Hawkeye must work together as the Avengers to defeat Ultron, a technological enemy bent on human extinction, while encountering the powerful twins Pietro and Wanda Maximoff, as well as the new entity Vision.</p>
+                </article>
+            </header>
+        </section>
+        <section id="contact">
+            <header>
+                <h2>Contact</h2>
+            </header>
+            <form action="//backend.com/conntact" novalidate>
+                <label for="name">Full name</label>
+                <input type="text" name="name" id="name" placeholder="Tell us your name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Tell us your email" required pattern="[a-zA-Z0-9_\.\+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-\.]+">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="birthdate">birthdate</label>
+                <input type="date" name="birthdate" id="birthdate">
+                <label for="birthdate">color</label>
+                <input type="color" name="birthdate" id="birthdate">
+                <label for="message">message</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="What do you need?"></textarea>
+                <button type="submit">Send!</button>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="http://marvel.com/avengers" target="_blank">website</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/avengers/" target="_blank">facebook</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/avengers" target="_blank">twitter</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/avengersmovie/" target="_blank">instagram</a>
+            </li>
+        </ul>
+        <p>
+            <mark>Marvel Studios</mark>
+            <time datetime="2017-01-01">2017</time>
+        </p>
+    </footer>
+</body>
+
+</html>
