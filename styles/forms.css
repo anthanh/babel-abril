@@ -1,0 +1,27 @@
+form {
+    font-size: 1.5em;
+}
+
+.form-input {
+    margin: 15px;
+}
+
+.form-input input, .form-input textarea {
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+.form-input input:focus, .form-input textarea:focus, .form-input input:invalid:focus, .form-input textarea:invalid:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.form-input input:invalid, .form-input textarea:invalid {
+    border-color: red;
+}
+
+.form-input input:valid, .form-input textarea:valid {
+    border-color: green;
+}

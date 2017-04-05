@@ -1,0 +1,27 @@
+.footer {
+    background-color: black;
+}
+
+.footer .footer-item {
+    display: inline-block;
+}
+
+.footer .footer-item a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer .footer-copyright {
+    text-align: right;
+}
+
+.footer .footer-copyright mark {
+    background-color: transparent;
+    color: white;
+}
+
+.footer .footer-copyright time {
+    color: white;
+    margin-right: 15px;
+}
