@@ -1,9 +1,29 @@
 form {
     font-size: 1.5em;
+    margin-bottom: 50px;
 }
 
-.form-input {
+form button[type="submit"] {
+    margin: 0 auto;
+    display: block;
+}
+
+form label {
+    width: 150px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.form-input, .form-radio {
     margin: 15px;
+}
+
+.form-radio label {
+    width: initial;
+}
+
+.form-radio input {
+    margin-right: 20px;
 }
 
 .form-input input, .form-input textarea {
@@ -24,4 +44,32 @@ form {
 
 .form-input input:valid, .form-input textarea:valid {
     border-color: green;
+}
+
+.button {
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #ddd;
+    padding: 10px 15px;
+    color: black;
+    border-radius: 5px;
+}
+
+.button:hover, .button:focus {
+    border-color: #ccc;
+    outline: none;
+}
+
+.button:active {
+    color: white;
+    background-color: #999;
+}
+
+.button:disabled {
+    color: #ddd;
+    cursor: default;
+}
+
+.button:hover:disabled {
+    border-color: #ddd;
 }
