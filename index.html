@@ -16,20 +16,27 @@
     <meta name="keywords" content="babel, example, html5, css3, js">
 
     <title>The Avengers</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 
 <body>
-    <nav>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <nav id="nav">
+        <a href="#home"><img src="assets/img/logo.gif" alt="Avenger's logo"></a>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-us">About us</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#movies">Movies</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="nav-item" href="#home">Home</a></li>
+            <li><a class="nav-item" href="#about-us">About us</a></li>
+            <li><a class="nav-item" href="#team">Team</a></li>
+            <li><a class="nav-item" href="#movies">Movies</a></li>
+            <li><a class="nav-item" href="#contact">Contact</a></li>
         </ul>
     </nav>
     <header id="home">

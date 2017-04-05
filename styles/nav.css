@@ -1,0 +1,32 @@
+nav {
+    background-color: black;
+    font-size: 1.1em;
+    color: white;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav .nav-item {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav > a {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav > a + ul {
+    padding: 0;
+    width: 80%;
+    display: inline-block;
+    text-align: right;
+}
+
+nav > a img {
+    height: 30px;
+}
