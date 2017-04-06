@@ -3,6 +3,8 @@
     width: 100vw;
     height: calc(100vh - 56px);
     margin-top: 56px;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 #home h1 {

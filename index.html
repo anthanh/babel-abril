@@ -15,11 +15,32 @@
     <meta name="description" content="babel example project">
     <meta name="keywords" content="babel, example, html5, css3, js">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
     <title>The Avengers</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:200,300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/forms.css">
@@ -46,6 +67,9 @@
             <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
+    <div class="row row-header"></div>
+
     <header id="home">
         <h1>The Avengers</h1>
     </header>
@@ -74,60 +98,74 @@
             <div class="row">
                 <article class="col-2">
                     <img src="assets/img/profiles/ironman.jpg" alt="Iron Man">
-                    <h3>Iron Man</h3>
-                    <cite>Robert Downey Jr.</cite>
-                    <p>A self-described genius, billionaire, playboy, and philanthropist with an electromechanical suit of armor of his own invention</p>
+                    <div class="caption">
+                        <h3>Iron Man</h3>
+                        <cite>Robert Downey Jr.</cite>
+                        <p>A self-described genius, billionaire, playboy, and philanthropist with an electromechanical suit of armor of his own invention</p>
+                    </div>
                 </article>
                 <article class="col-2">
                     <img src="assets/img/profiles/capitan-america.jpg" alt="Capitán América">
-                    <h3>Capitán América</h3>
-                    <cite>Chris Evans</cite>
-                    <p>A World War II veteran who was enhanced to the peak of human physicality by an experimental serum and frozen in suspended animation before waking up in the modern world</p>
+                    <div class="caption">
+                        <h3>Capitán América</h3>
+                        <cite>Chris Evans</cite>
+                        <p>A World War II veteran who was enhanced to the peak of human physicality by an experimental serum and frozen in suspended animation before waking up in the modern world</p>
+                    </div>
                 </article>
                 <article class="col-2">
                     <img src="assets/img/profiles/black-widow.jpg" alt="Viuda Negra">
-                    <h3>Viuda Negra</h3>
-                    <cite>Scarlett Johansson</cite>
-                    <p>A highly trained spy working for S.H.I.E.L.D</p>
+                    <div class="caption">
+                        <h3>Viuda Negra</h3>
+                        <cite>Scarlett Johansson</cite>
+                        <p>A highly trained spy working for S.H.I.E.L.D</p>
+                    </div>
                 </article>
                 <article class="col-2">
                     <img src="assets/img/profiles/thor.jpg" alt="Thor">
-                    <h3>Thor</h3>
-                    <cite>Chris Hemsworth</cite>
-                    <p>The crown prince of Asgard, based on the Norse mythological deity of the same name</p>
+                    <div class="caption">
+                        <h3>Thor</h3>
+                        <cite>Chris Hemsworth</cite>
+                        <p>The crown prince of Asgard, based on the Norse mythological deity of the same name</p>
+                    </div>
                 </article>
-                <article class="col-2">
+                <article id="hulk" class="col-2">
                     <img src="assets/img/profiles/hulk.jpg" alt="Hulk">
-                    <h3>Hulk</h3>
-                    <cite>Mark Ruffalo</cite>
-                    <p>A genius scientist who, because of exposure to gamma radiation, transforms into a monster when enraged or agitated</p>
+                    <div class="caption">
+                        <h3>Hulk</h3>
+                        <cite>Mark Ruffalo</cite>
+                        <p>A genius scientist who, because of exposure to gamma radiation, transforms into a monster when enraged or agitated</p>
+                    </div>
                 </article>
                 <article class="col-2">
                     <img src="assets/img/profiles/hawk-eye.jpg" alt="Clint Barton Hawkeye">
-                    <h3>Clint Barton Hawkeye</h3>
-                    <cite>Jeremy Renner</cite>
-                    <p>A master archer working as an agent for S.H.I.E.L.D</p>
+                    <div class="caption">
+                        <h3>Clint Barton Hawkeye</h3>
+                        <cite>Jeremy Renner</cite>
+                        <p>A master archer working as an agent for S.H.I.E.L.D</p>
+                    </div>
                 </article>
             </div>
         </section>
-        <section id="movies" class="container">
-            <header class="row">
+
+        <section id="movies">
+            <header>
                 <h2>Movies</h2>
             </header>
-            <div class="row">
-                <article class="col-offset-1 col-5">
+            <div>
+                <article>
                     <!-- <article class="col-6"> -->
                     <img src="assets/img/movie1.jpg" alt="The Avengers 2012">
                     <h3>The Avengers <time datetime="2012-01-01">(2012)</time></h3>
                     <p>Nick Fury, the director of S.H.I.E.L.D., gathers the superheroes Iron Man, Thor, Captain America, the Hulk, Black Widow and Hawkeye to fight Thor's brother Loki, who plots to subjugate the Earth.</p>
                 </article>
-                <article class="col-5">
+                <article>
                     <img src="assets/img/movie2.jpg" alt=">Avengers: Age of Ultron 2015">
                     <h3>Avengers: Age of Ultron <time datetime="2015-01-01">(2015)</time></h3>
                     <p>Iron Man, Captain America, Thor, the Hulk, Black Widow, and Hawkeye must work together as the Avengers to defeat Ultron, a technological enemy bent on human extinction, while encountering the powerful twins Pietro and Wanda Maximoff, as well as the new entity Vision.</p>
                 </article>
             </div>
         </section>
+
         <section id="contact" class="container">
 
             <header class="row">
@@ -135,7 +173,7 @@
             </header>
 
             <div class="row">
-                <form action="//backend.com/conntact" class="col-offset-2 col-8">
+                <form action="" class="col-offset-2 col-8">
 
                     <div class="form-input">
                         <label for="name">Full name</label>
