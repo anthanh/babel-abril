@@ -2,6 +2,24 @@
 
 (function() {
 
+    initForm();
+
+    function initForm() {
+        var name = sessionStorage.getItem('name')
+        if (name) {
+            $('#name').val(name);
+        }
+
+        $('input').each(function(index, elem) {
+            $('#' + elem.name).val(sessionStorage.getItem(elem.name))
+        });
+
+        var gender = sessionStorage.getItem('gender')
+        if (gender) {
+            $('input[value="' + gender + '"]').attr('checked', 'checked');
+        }
+    }
+
     function validateForm() {
 
         // var inputs = Array.prototype.slice.call($('input'), 0);
@@ -47,6 +65,11 @@
             // auto resolved promise
             return Promise.resolve();
         };
+
+        sessionStorage.setItem('name', $('input[name="name"]').val());
+        sessionStorage.setItem('email', $('input[name="email"]').val());
+        sessionStorage.setItem('gender', $('input[name="gender"]').val());
+        sessionStorage.setItem('birthdate', $('input[name="birthdate"]').val());
 
         // your code
         window.service.contact.send({
