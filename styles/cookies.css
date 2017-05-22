@@ -1,0 +1,15 @@
+.cookies {
+    transition: transform 1s;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.cookies.ok {
+    transform: translateY(100px);
+    /*transform: translate(0, 100px);*/
+}
