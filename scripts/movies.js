@@ -2,7 +2,10 @@
 
 (function() {
 
-    window.service.photo.getPhotos().then(function(responses) {
+    window.service.photo.getPhotos({
+        // limit: document.getElementById('movies').dataSet.length
+        limit: $('#movies').data('newPosts')
+    }).then(function(responses) {
         console.log(responses);
         var html = responses.reduce(function(total, response, index, list) {
             console.log(arguments);

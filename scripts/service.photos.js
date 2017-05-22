@@ -18,11 +18,13 @@
         });
     }
 
-    function getPhotos() {
+    function getPhotos(params) {
+        params = params || {};
+        params.limit = params.limit || 2;
         return $.ajax({
             type: 'GET',
             dataType: 'json',
-            url: this.root + '/photos?_limit=2'
+            url: this.root + '/photos?_limit=' + params.limit
         });
     }
 
