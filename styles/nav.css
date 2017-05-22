@@ -16,7 +16,7 @@
     display: inline-block;
 }
 
-.nav .nav-item > a {
+.nav .nav-item>a {
     transition: background-color 0.3s, color 0.3s;
     /*will-change: background-color, color;*/
     color: white;
@@ -28,7 +28,7 @@
     text-transform: uppercase;
 }
 
-.nav .nav-item.nav-item--active > a, .nav .nav-item > a:hover {
+.nav .nav-item.nav-item--active>a, .nav .nav-item>a:hover {
     background-color: white;
     color: black;
 }
