@@ -1,0 +1,10 @@
+.geo {
+    padding: 0;
+}
+
+.geo iframe {
+    border: 0;
+    width: 100vw;
+    height: 50vh;
+    pointer-events: none;
+}
