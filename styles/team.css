@@ -40,6 +40,11 @@
 #team article {
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+}
+
+#team article.over {
+    border: 2px dashed black;
 }
 
 
