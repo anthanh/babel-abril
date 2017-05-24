@@ -33,6 +33,7 @@
     <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 
     <title>The Avengers</title>
@@ -162,12 +163,20 @@
             <div>
                 <article draggable="true">
                     <!-- <article class="col-6"> -->
-                    <img src="assets/img/movie1.jpg" draggable="false" alt="The Avengers 2012">
-                    <h3>The Avengers <time datetime="2012-01-01">(2012)</time></h3>
+                    <picture>
+                        <source srcset="assets/img/movie1-1x.jpg" media="(max-width: 480px)">
+                        <source srcset="assets/img/movie1-2x.jpg" media="(min-width: 481px) and (max-width: 960px)">
+                        <img src="assets/img/movie1-3x.jpg" draggable="false" alt="The Avengers 2012">
+                    </picture>
+                    <h3>The Avengers <time datetime="2012-01-01 ">(2012)</time></h3>
                     <p>Nick Fury, the director of S.H.I.E.L.D., gathers the superheroes Iron Man, Thor, Captain America, the Hulk, Black Widow and Hawkeye to fight Thor's brother Loki, who plots to subjugate the Earth.</p>
                 </article>
                 <article draggable="true">
-                    <img src="assets/img/movie2.jpg" draggable="false" alt=">Avengers: Age of Ultron 2015">
+                    <picture>
+                        <source srcset="assets/img/movie2-1x.jpg" media="(max-width: 480px)">
+                        <source srcset="assets/img/movie2-2x.jpg" media="(min-width: 481px) and (max-width: 960px)">
+                        <img src="assets/img/movie2-1x.jpg " draggable="false " alt=">Avengers: Age of Ultron 2015">
+                    </picture>
                     <h3>Avengers: Age of Ultron <time datetime="2015-01-01">(2015)</time></h3>
                     <p>Iron Man, Captain America, Thor, the Hulk, Black Widow, and Hawkeye must work together as the Avengers to defeat Ultron, a technological enemy bent on human extinction, while encountering the powerful twins Pietro and Wanda Maximoff, as well as the new entity Vision.</p>
                 </article>
