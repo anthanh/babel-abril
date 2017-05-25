@@ -1,70 +1,30 @@
-#movies div {
-    /*display: flex;
-    flex-direction: row;
-    align-items: stretch;*/
-    /*justify-content: space-around;*/
-    width: 100%;
-}
-
-#movies article {
-    /*width: 40%;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#movies article picture {
-    width: 100%;
-}
-
-#movies article img {
-    width: 100%;
-    height: 500px;
-    /*object-fit: contain;*/
-    object-fit: cover;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-#movies article img:hover {
-    box-shadow: 0px 10px 40px #999;
-    transform: scale(1.05);
-}
-
-#movies article p {
-    width: 85%;
-}
-
-@media all and (max-width: 680px) {
-    #movies article img {
-        object-fit: contain;
-    }
-}
-
-
-/* 0px - 480px */
-
-
-/* 481px - 960px */
-
-
-/* >961px */
-
-
-/*@media all and (max-width: 960px) {
-    #movies div {
-        flex-wrap: wrap;
-    }
-}
-
-@media all and (max-width: 480px) {
-    #movies article {
+#movies {
+    div {
         width: 100%;
     }
-}
-
-@media all and (min-width: 481px) and (max-width: 960px) {
-    #movies article {
-        width: 33%;
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        picture {
+            width: 100%;
+        }
+        p {
+            width: 85%;
+        }
+        img {
+            width: 100%;
+            height: 500px;
+            /*object-fit: contain;*/
+            object-fit: cover;
+            transition: box-shadow 0.3s, transform 0.3s;
+            &:hover {
+                box-shadow: 0px 10px 40px #999;
+                transform: scale(1.05);
+            }
+                @include mobile {
+             object-fit: contain;
+          }
+        }
     }
 }
-*/

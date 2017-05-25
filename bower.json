@@ -1,0 +1,19 @@
+{
+    "name": "babel-abril",
+    "version": "0.0.1",
+    "homepage": "https://github.com/anthanh/babel-abril",
+    "authors": [
+        "Anthanh Pham Trinh <antai.pt@gmail.com>"
+    ],
+    "description": "An example proyect for learning purposes",
+    "main": "",
+    "keywords": [
+        "babel",
+        "keepcoding",
+        "learning"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "bootstrap": "^3.3.7"
+    }
+}

@@ -6,6 +6,21 @@
 
 /* >961px */
 
+// try to do this way
+// $breakpoints: mobile, tablet;
+// @each $breakpoint in $breakpoints {
+//     @mixin #{$breakpoint} {
+//         @media all and (max-width: $max-#{$breakpoint}) {
+//             @content;
+//         }
+//     }
+// }
+@mixin mobile {
+    @media all and (max-width: $max-mobile) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media all and (max-width: $max-tablet) {
         @content;

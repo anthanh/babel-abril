@@ -1,0 +1,28 @@
+{
+  "name": "babel-abril",
+  "version": "0.0.1",
+  "description": "An example proyect for learning purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthanh/babel-abril.git"
+  },
+  "keywords": [
+    "babel",
+    "keepcoding",
+    "learning"
+  ],
+  "author": "anthanh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anthanh/babel-abril/issues"
+  },
+  "homepage": "https://github.com/anthanh/babel-abril#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {}
+}
