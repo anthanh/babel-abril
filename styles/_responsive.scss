@@ -1,0 +1,13 @@
+/* 0px - 480px */
+
+
+/* 481px - 960px */
+
+
+/* >961px */
+
+@mixin tablet {
+    @media all and (max-width: $max-tablet) {
+        @content;
+    }
+}
