@@ -4,7 +4,7 @@
   "description": "An example proyect for learning purposes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node-sass styles/main.scss > styles/main.css"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,11 @@
   "dependencies": {
     "jquery": "^3.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  }
 }

@@ -12,14 +12,10 @@ form {
     }
 }
 
-.form-input {
+.form-group {
     margin: 15px;
     input, textarea {
         transition: border-color 0.3s;
-        border-radius: 8px;
-        border: 2px solid #ccc;
-        font-size: 0.9em;
-        padding: 10px;
         &:focus, &:invalid:focus {
             outline: none;
             border-color: #999;
@@ -43,19 +39,11 @@ form {
     }
 }
 
-.button {
-    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    will-change: border-color, transform;
+.btn {
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    background-color: white;
-    border: 2px solid #ddd;
-    padding: 10px 15px;
-    color: black;
-    border-radius: 5px;
     &:hover {
         transform: scale(1.2);
-        border-color: #ccc;
-        outline: none;
         &:disabled {
             border-color: #ddd;
         }
