@@ -2,7 +2,7 @@
 
 (function() {
 
-    var request = indexedDB.open("database", 1);
+    var request = indexedDB.open('database', 1);
     var db;
 
     request.onsuccess = function(e) {
@@ -14,7 +14,7 @@
     request.onupgradeneeded = function(e) {
         console.log('db upgraded');
         var db = event.target.result;
-        var objectStore = db.createObjectStore("people", {
+        var objectStore = db.createObjectStore('people', {
             keyPath: 'id',
             autoIncrement: true
         });
@@ -28,14 +28,14 @@
 
 
     function save(data) {
-        var transaction = db.transaction("people", "readwrite");
+        var transaction = db.transaction('people', 'readwrite');
         transaction.oncomplete = function(event) {
-            alert("All done!");
+            alert('All done!');
         };
         transaction.onerror = function(event) {
             // handle errors!
         };
-        var peopleObjectStore = transaction.objectStore("people");
+        var peopleObjectStore = transaction.objectStore('people');
         var addResponse = peopleObjectStore.add(data);
         addResponse.onsuccess = function() {
             console.log('added', data);

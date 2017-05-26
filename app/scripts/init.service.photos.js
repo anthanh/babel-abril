@@ -14,7 +14,7 @@
         return $.ajax({
             type: 'GET',
             dataType: 'json',
-            url: this.root + '/photos/' + photoId
+            url: service.root + '/photos/' + photoId
         });
     }
 
@@ -24,7 +24,7 @@
         return $.ajax({
             type: 'GET',
             dataType: 'json',
-            url: this.root + '/photos?_limit=' + params.limit
+            url: service.root + '/photos?_limit=' + params.limit
         });
     }
 
@@ -32,7 +32,7 @@
         return $.ajax({
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
-            url: this.root + '/photos',
+            url: service.root + '/photos',
             data: JSON.stringify(data)
         });
     }
@@ -42,7 +42,7 @@
         return $.ajax({
             type: 'PUT',
             contentType: 'application/json; charset=utf-8',
-            url: this.root + '/photos/' + id,
+            url: service.root + '/photos/' + id,
             data: JSON.stringify(data)
         });
     }
@@ -50,11 +50,11 @@
     function deletePhoto(id) {
         return $.ajax({
             type: 'DELETE',
-            url: this.root + '/photos/' + id
+            url: service.root + '/photos/' + id
         });
     }
 
     window.service = window.service || {};
     window.service.photo = service;
 
-})()
+})();

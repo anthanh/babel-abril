@@ -57,10 +57,89 @@ module.exports = function(grunt) {
             }
         },
 
+        wiredep: {
+            app: {
+                src: [
+                    '<%= appConfig.app %>/index.html'
+                ],
+                ignorePath: /\.\.\//
+            },
+            sass: {
+                src: ['<%= appConfig.app %>/styles/{,*/}*.{scss,sass}']
+            }
+        },
+
+        includeSource: {
+            options: {
+                basePath: ['<%= appConfig.app %>', '.tmp'],
+                baseUrl: '',
+            },
+            server: {
+                files: {
+                    '.tmp/index.html': '<%= appConfig.app %>/index.html'
+                }
+            },
+            dist: {
+                files: {
+                    '<%= appConfig.dist %>/index.html': '<%= appConfig.app %>/index.html'
+                }
+            }
+        },
+
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
+            },
+            all: {
+                src: [
+                    'Gruntfile.js',
+                    '<%= appConfig.app %>/**/*.js'
+                ]
+            }
+        },
+
+        sass: {
+            options: {
+                sourceMap: true
+            },
+            all: {
+                files: [{
+                    expand: true,
+                    cwd: 'app',
+                    src: ['styles/main.scss'],
+                    dest: '.tmp',
+                    ext: '.css'
+                }]
+            }
+        },
+
+        autoprefixer: {
+            options: {
+                browsers: ['last 10 version']
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '.tmp/styles/',
+                    src: '**/*.css',
+                    dest: '.tmp/styles/'
+                }]
+            }
+        },
 
     });
 
+    grunt.registerTask('test', ['jshint']);
+
     // default task
-    grunt.registerTask('default', ['connect:livereload', 'watch']);
+    grunt.registerTask('default', [
+        'wiredep',
+        'sass',
+        'autoprefixer',
+        'includeSource:server',
+        'connect:livereload',
+        'watch'
+    ]);
 
 };

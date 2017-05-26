@@ -5,16 +5,16 @@
     initForm();
 
     function initForm() {
-        var name = sessionStorage.getItem('name')
+        var name = sessionStorage.getItem('name');
         if (name) {
             $('#name').val(name);
         }
 
         $('input').each(function(index, elem) {
-            $('#' + elem.name).val(sessionStorage.getItem(elem.name))
+            $('#' + elem.name).val(sessionStorage.getItem(elem.name));
         });
 
-        var gender = sessionStorage.getItem('gender')
+        var gender = sessionStorage.getItem('gender');
         if (gender) {
             $('input[value="' + gender + '"]').attr('checked', 'checked');
         }

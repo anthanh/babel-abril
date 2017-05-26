@@ -14,7 +14,7 @@
         return $.ajax({
             type: 'GET',
             dataType: 'json',
-            url: this.root + '/posts/' + postId
+            url: service.root + '/posts/' + postId
         });
     }
 
@@ -22,7 +22,7 @@
         return $.ajax({
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
-            url: this.root + '/posts',
+            url: service.root + '/posts',
             data: JSON.stringify(data)
         });
     }
@@ -31,7 +31,7 @@
         return $.ajax({
             type: 'PUT',
             contentType: 'application/json; charset=utf-8',
-            url: this.root + '/posts/' + id,
+            url: service.root + '/posts/' + id,
             data: JSON.stringify(data)
         });
     }
@@ -39,11 +39,11 @@
     function deletePost(id) {
         return $.ajax({
             type: 'DELETE',
-            url: this.root + '/posts/' + id
+            url: service.root + '/posts/' + id
         });
     }
 
     window.service = window.service || {};
     window.service.post = service;
 
-})()
+})();
