@@ -39,17 +39,32 @@ module.exports = function(grunt) {
         },
 
         watch: {
+            bower: {
+                files: ['bower.json'],
+                tasks: ['wiredep']
+            },
             sass: {
                 files: [
                     '<%= appConfig.app %>/styles/**/*.{scss,sass}'
                 ],
                 tasks: ['sass', 'autoprefixer']
             },
+            jshint: {
+                files: [
+                    '<%= appConfig.app %>/**/*.js'
+                ],
+                tasks: ['jshint', 'includeSource:server']
+            },
+            html: {
+                files: ['<%= appConfig.app %>/**/*.html'],
+                tasks: ['includeSource:server', 'processhtml:server']
+            },
             livereload: {
                 options: {
                     livereload: '<%= appConfig.livereloadPort %>'
                 },
                 files: [
+                    '.tmp/*.html',
                     '<%= appConfig.app %>/**/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '<%= appConfig.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -128,18 +143,124 @@ module.exports = function(grunt) {
             }
         },
 
+        clean: {
+            dist: {
+                files: [{
+                    dot: true,
+                    src: [
+                        '.sass-cache',
+                        '.tmp',
+                        '<%= appConfig.dist %>'
+                    ]
+                }]
+            }
+        },
+
+        copy: {
+            dist: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= appConfig.app %>',
+                    dest: '<%= appConfig.dist %>',
+                    src: [
+                        'assets/**/*',
+                    ]
+                }]
+            }
+        },
+
+        filerev: {
+            dist: {
+                src: [
+                    '<%= appConfig.dist %>/**/*.js',
+                    '<%= appConfig.dist %>/styles/**/*.css',
+                    '<%= appConfig.dist %>/assets/**/*.{png,jpg,jpeg,gif,webp,svg}',
+                    '<%= appConfig.dist %>/assets/fonts/*'
+                ]
+            }
+        },
+
+        useminPrepare: {
+            html: '<%= appConfig.dist %>/index.html',
+            options: {
+                dest: '<%= appConfig.dist %>',
+                flow: {
+                    html: {
+                        steps: {
+                            js: ['concat', 'uglifyjs'],
+                            css: ['cssmin']
+                        },
+                        post: {}
+                    }
+                }
+            }
+        },
+
+        usemin: {
+            html: ['<%= appConfig.dist %>/{,**/}*.html'],
+            css: ['<%= appConfig.dist %>/styles/{,*/}*.css'],
+            options: {
+                assetsDirs: ['<%= appConfig.dist %>', '<%= appConfig.dist %>/assets']
+            }
+        },
+
+        htmlmin: {
+            dist: {
+                options: {
+                    collapseWhitespace: true,
+                    conservativeCollapse: true,
+                    collapseBooleanAttributes: true,
+                    removeCommentsFromCDATA: true,
+                    removeOptionalTags: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= appConfig.dist %>',
+                    src: ['**/*.html'],
+                    dest: '<%= appConfig.dist %>'
+                }]
+            }
+        }
+
     });
 
-    grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('build', [
+        'clean:dist',
+        'wiredep',
+        'includeSource:dist',
+        'useminPrepare',
+        'sass',
+        'autoprefixer',
+        'concat:generated',
+        'copy:dist',
+        'cssmin',
+        'uglify',
+        'filerev',
+        'usemin',
+        'htmlmin'
+    ]);
+
+    grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
+        if (target === 'dist') {
+            return grunt.task.run(['build', 'connect:dist:keepalive']);
+        }
+
+        grunt.task.run([
+            'clean:server',
+            'wiredep',
+            'includeSource:server',
+            'sass',
+            'autoprefixer',
+            'connect:livereload',
+            'watch'
+        ]);
+    });
 
     // default task
     grunt.registerTask('default', [
-        'wiredep',
-        'sass',
-        'autoprefixer',
-        'includeSource:server',
-        'connect:livereload',
-        'watch'
+        'jshint',
+        'build'
     ]);
 
 };

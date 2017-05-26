@@ -1,7 +1,6 @@
 'use strict';
 
 (function() {
-
     window.service.photo.getPhotos({
         // limit: document.getElementById('movies').dataSet.length
         limit: $('#movies').data('newPosts')
