@@ -57,7 +57,7 @@ module.exports = function(grunt) {
             },
             html: {
                 files: ['<%= appConfig.app %>/**/*.html'],
-                tasks: ['includeSource:server', 'processhtml:server']
+                tasks: ['includeSource:server']
             },
             livereload: {
                 options: {
@@ -247,7 +247,7 @@ module.exports = function(grunt) {
         }
 
         grunt.task.run([
-            'clean:server',
+            'clean:dist',
             'wiredep',
             'includeSource:server',
             'sass',
